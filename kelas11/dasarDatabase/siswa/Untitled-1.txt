@@ -1,0 +1,11 @@
+mematikan wifi driver kita terlebih dahulu. dengan mengetikkan:
+
+ sudo modprobe -rv rtl8723be
+
+lalu nyalakan kembali dengan mengetikkan perintah:
+
+ sudo modprobe -v rtl8723be ant_sel=1
+
+Untuk mempermanenkan setingan diatas kita bisa mengatikkan perintah:
+
+ sudo tee /etc/modprobe.d/rtl8723be.conf <<< "options rtl8723be ant_sel=1"
