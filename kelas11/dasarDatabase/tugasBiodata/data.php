@@ -38,9 +38,9 @@ include 'database.php';
       </div>
     </nav>
     <!-- isi -->
-    <div class="container mt-5 mb-5" style="Margin-top: 50px;">
+<div class="container mt-5 mb-5" style="Margin-top: 50px;">
     <table class="table">
-  <thead class="thead-dark">
+    <thead class="thead-dark">
     <tr>
       <th scope="col">No</th>
       <th scope="col">Nama</th>
@@ -51,12 +51,12 @@ include 'database.php';
       <th scope="col">Umur</th>
       <th scope="col">Aksi</th>
     </tr>
-  </thead>
-  <tbody>
-  <?php
-  $no=1;
-  foreach ($biodata->index() as $data ) {
-?>
+    </thead>
+    <tbody>
+    <?php
+    $no=1;
+    foreach ($biodata->index() as $data ) {
+    ?>
     <tr>
       <th scope="row"><?=$no++?></th>
       <td><?=$data['nama']?></td>
@@ -64,17 +64,17 @@ include 'database.php';
       <td><?=$data['tgl_lahir']?></td>
       <td><?=$data['jenis_kelamin']?></td>
       <td><?=$data['agama']?></td>
-      <td><?=$data['umur']?>Thn</td>
+      <td><?=$data['umur']?></td>
       <td><a class="btn btn-primary btn-sm" href="biodata.php?id=<?=$data['id']?>"  role="button">lihat</a>|
       <a class="btn btn-warning btn-sm" href="edit.php?id=<?=$data['id']?>"  role="button">edit</a>|
-      <a class="btn btn-danger btn-sm" href="proses.php?id=<?=$data['id']?>&aksi=delete" onclick="return confirm('yakin?');" role="button">hapus</a></td>
+      <a class="btn btn-danger btn-sm" href="proses.php?id=<?=$data['id']?>&aksi=delete" onclick="return confirm('are u sure senpai :3?');" role="button">hapus</a></td>
     </tr>
     <?php
-  }
-  ?>
-  </tbody>
-</table>
-    </div>
+    }
+    ?>
+    </tbody>
+    </table>
+</div>
     <!-- js -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.js"></script>

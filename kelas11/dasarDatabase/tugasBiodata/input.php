@@ -16,8 +16,7 @@
         data-target="#navbarTogglerDemo03"
         aria-controls="navbarTogglerDemo03"
         aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" href="index.php">Romi Ramdhani</a>
@@ -36,8 +35,8 @@
       </div>
     </nav>
     <!-- isi -->
-    <div class="container mt-5 mb-5 bg-light" style="Margin-top: 50px;">
-    <form action="proses.php?aksi=tambah" method="post">
+<div class="container mt-5 mb-5 bg-light" style="Margin-top: 50px;">
+  <form action="proses.php?aksi=tambah" method="post">
     <h1>Formulir</h1>
   <div class="form-group">
     <label for="exampleFormControlInput1">Nama</label>
@@ -72,8 +71,8 @@
     </select>
   </div>
   <button class="btn btn-primary mb-3" name="save" type="submit">Tambah</button>
-</form>
-    </div>
+  </form>
+</div>
     <!-- js -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.js"></script>

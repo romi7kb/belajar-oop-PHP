@@ -84,35 +84,18 @@
   <div class="form-group">
     <label for="exampleFormControlSelect1">Agama</label>
     <select class="form-control" readonly name="agama" id="exampleFormControlSelect1">
-       <?php
-            if ($data['agama']=="Islam") {
-            ?>
-            <option >Islam</option>
-            <?php
-            }
-            elseif ($data['agama']=="Kristen") {
-            ?>
-            <option>Kristen</option>
-            <?php
-            }
-           
-            elseif ($data['agama']=="Hindu") {
-            ?>
-            <option>Hindu</option>
-            <?php
-            }
-           
-            elseif ($data['agama']=="Budha") {
-            ?>
-            <option>Budha</option>
-            <?php
-            }
-            ?>
+       <?php if ($data['agama']=="Islam") {?>
+          <option >Islam</option>
+        <?php }elseif ($data['agama']=="Kristen") {?>
+          <option>Kristen</option>
+        <?php }elseif ($data['agama']=="Hindu") {?>
+          <option>Hindu</option>
+        <?php }elseif ($data['agama']=="Budha") {?>
+          <option>Budha</option>
+        <?php }?>
     </select>
   </div>
-  <?php        
-        }
-    ?>
+  <?php  }?>
     </div>
     <!-- js -->
     <script src="assets/js/jquery.min.js"></script>

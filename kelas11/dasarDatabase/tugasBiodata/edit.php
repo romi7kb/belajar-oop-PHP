@@ -19,8 +19,7 @@
         data-target="#navbarTogglerDemo03"
         aria-controls="navbarTogglerDemo03"
         aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+        aria-label="Toggle navigation"      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" href="index.php">Romi Ramdhani</a>
@@ -34,86 +33,67 @@
     </nav>
     <!-- isi -->
     <div class="container mt-5 mb-5 bg-light" style="Margin-top: 50px;">
-    <form action="proses.php?aksi=update" method="post">
-    <h1>Biodata</h1>
-    <?php
-        foreach ($biodata->show($_GET['id']) as $data ) {
-    ?>
-    <input type="hidden" name="id" value="<?=$data['id']?>">
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Nama</label>
-    <input type="text" class="form-control" value="<?=$data['nama']?>" name="nama" id="exampleFormControlInput1">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Alamat</label>
-    <textarea class="form-control" name="alamat" id="exampleFormControlTextarea1" rows="3"><?=$data['alamat']?></textarea>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlInput2">Tanggal Lahir</label>
-    <input type="date" class="form-control" value="<?=$data['tgl_lahir']?>" name="tgl_lahir" id="exampleFormControlInput2">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlInput3">Jenis Kelamin</label><br>
-        <div class="form-check form-check-inline">
-            <?php
-            if ($data['jenis_kelamin']=="Laki-laki") {
-            ?>
-            <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio1" value="Laki-laki"checked>
-            <?php
-            }
-            ?>
-        <label class="form-check-label" for="inlineRadio1" >Laki-laki</label>
+      <form action="proses.php?aksi=update" method="post">
+        <h1>Biodata</h1>
+          <?php
+              foreach ($biodata->show($_GET['id']) as $data ) {
+          ?>
+        <input type="hidden" name="id" value="<?=$data['id']?>">
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Nama</label>
+          <input type="text" class="form-control" value="<?=$data['nama']?>" name="nama" id="exampleFormControlInput1">
         </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio2" value="Perempuan" <?php
-            if ($data['jenis_kelamin']=="Perempuan") {
-            ?>
-            checked
-            <?php
-            }
-            ?>>
-            <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Alamat</label>
+          <textarea class="form-control" name="alamat" id="exampleFormControlTextarea1" rows="3"><?=$data['alamat']?></textarea>
         </div>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Agama</label>
-    <select class="form-control" name="agama" id="exampleFormControlSelect1">
-    <option <?php
-            if ($data['agama']=="Islam") {
-            ?>
-            selected
-            <?php
-            }
-            ?>>Islam</option>
-      <option <?php
-            if ($data['agama']=="Kristen") {
-            ?>
-            selected
-            <?php
-            }
-            ?>>Kristen</option>
-      <option <?php
-            if ($data['agama']=="Hindu") {
-            ?>
-            selected
-            <?php
-            }
-            ?>>Hindu</option>
-      <option <?php
-            if ($data['agama']=="Budha") {
-            ?>
-            selected
-            <?php
-            }
-            ?>>Budha</option>
-    </select>
-  </div>
-  <?php        
-        }
-    ?>
-  <button class="btn btn-primary  mb-3" name="save" type="submit">Ubah</button>
-</form>
-
+        <div class="form-group">
+          <label for="exampleFormControlInput2">Tanggal Lahir</label>
+          <input type="date" class="form-control" value="<?=$data['tgl_lahir']?>" name="tgl_lahir" id="exampleFormControlInput2">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput3">Jenis Kelamin</label><br>
+              <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio1" value="Laki-laki"
+                  <?php
+                  if ($data['jenis_kelamin']=="Laki-laki") {?>
+                  checked
+                  <?php }?>>
+              <label class="form-check-label" for="inlineRadio1" >Laki-laki</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio2" value="Perempuan" <?php
+                  if ($data['jenis_kelamin']=="Perempuan") {?>
+                  checked
+                  <?php }?>>
+                  <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+              </div>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Agama</label>
+          <select class="form-control" name="agama" id="exampleFormControlSelect1">
+          <option <?php
+                  if ($data['agama']=="Islam") {?>
+                  selected
+                  <?php }?>>Islam</option>
+            <option <?php
+                  if ($data['agama']=="Kristen") {?>
+                  selected
+                  <?php }?>>Kristen</option>
+            <option <?php
+                  if ($data['agama']=="Hindu") {   ?>
+                  selected
+                  <?php }?>>Hindu</option>
+            <option <?php
+                  if ($data['agama']=="Budha") {
+                  ?>
+                  selected
+                  <?php }?>>Budha</option>
+          </select>
+        </div>
+        <?php }?>
+          <button class="btn btn-primary  mb-3" name="save" type="submit">Ubah</button>
+      </form>
     </div>
     <!-- js -->
     <script src="assets/js/jquery.min.js"></script>
