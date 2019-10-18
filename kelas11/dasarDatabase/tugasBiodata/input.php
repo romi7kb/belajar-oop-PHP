@@ -40,15 +40,15 @@
     <h1>Formulir</h1>
   <div class="form-group">
     <label for="exampleFormControlInput1">Nama</label>
-    <input type="text" class="form-control" name="nama" id="exampleFormControlInput1">
+    <input type="text" class="form-control" name="nama" id="exampleFormControlInput1" required>
   </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Alamat</label>
-    <textarea class="form-control" name="alamat" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea class="form-control" name="alamat" id="exampleFormControlTextarea1" rows="3" required></textarea>
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput2">Tanggal Lahir</label>
-    <input type="date" class="form-control" name="tgl_lahir" id="exampleFormControlInput2">
+    <input type="date" class="form-control" name="tgl_lahir" id="exampleFormControlInput2" required>
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput3">Jenis Kelamin</label><br>

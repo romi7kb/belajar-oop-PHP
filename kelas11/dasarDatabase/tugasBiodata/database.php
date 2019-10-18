@@ -32,7 +32,7 @@ class Biodata extends Database
     // menambah data
     public function create($nama, $alamat, $tgl_lahir,$jenis_kelamin,$agama,$umur)
     {
-        mysqli_query($this->koneksi, "INSERT INTO biodata VALUES ('','$nama','$alamat','$tgl_lahir','$jenis_kelamin','$agama','$umur') ");
+        mysqli_query($this->koneksi, "INSERT INTO biodata VALUES (null,'$nama','$alamat','$tgl_lahir','$jenis_kelamin','$agama','$umur') ");
     }
     // menampilkan data berdasarkan id
     public function show($id)

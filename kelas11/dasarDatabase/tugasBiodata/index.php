@@ -36,7 +36,7 @@
     </nav>
     <!-- isi -->
     <div class="container mt-5 mb-5 bg-light" style="Margin-top: 50px;">
-        <h1>Selamat datang</h1>   
+        <h1>Welcome to my program!</h1>   
     </div>
     <!-- js -->
     <script src="assets/js/jquery.min.js"></script>

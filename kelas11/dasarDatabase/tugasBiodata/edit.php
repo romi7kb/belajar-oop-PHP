@@ -41,15 +41,15 @@
         <input type="hidden" name="id" value="<?=$data['id']?>">
         <div class="form-group">
           <label for="exampleFormControlInput1">Nama</label>
-          <input type="text" class="form-control" value="<?=$data['nama']?>" name="nama" id="exampleFormControlInput1">
+          <input type="text" class="form-control" value="<?=$data['nama']?>" name="nama" id="exampleFormControlInput1" required>
         </div>
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Alamat</label>
-          <textarea class="form-control" name="alamat" id="exampleFormControlTextarea1" rows="3"><?=$data['alamat']?></textarea>
+          <textarea class="form-control" name="alamat" id="exampleFormControlTextarea1" rows="3" required><?=$data['alamat']?></textarea>
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput2">Tanggal Lahir</label>
-          <input type="date" class="form-control" value="<?=$data['tgl_lahir']?>" name="tgl_lahir" id="exampleFormControlInput2">
+          <input type="date" class="form-control" value="<?=$data['tgl_lahir']?>" name="tgl_lahir" id="exampleFormControlInput2" required>
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput3">Jenis Kelamin</label><br>
@@ -92,7 +92,8 @@
           </select>
         </div>
         <?php }?>
-          <button class="btn btn-primary  mb-3" name="save" type="submit">Ubah</button>
+          <a class="btn btn-primary mb-3" href="data.php"  role="button">Kembali</a>
+          <button class="btn btn-warning  mb-3" name="save" type="submit">Ubah</button>
       </form>
     </div>
     <!-- js -->

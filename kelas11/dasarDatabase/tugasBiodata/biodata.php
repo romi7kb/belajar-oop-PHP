@@ -63,27 +63,18 @@
             <?php
             if ($data['jenis_kelamin']=="Laki-laki") {
             ?>
-            <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio1" value="Laki-laki" checked>
+            <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio1" value="Laki-laki" checked disabled>
         <label class="form-check-label" for="inlineRadio1" >Laki-laki</label>
             <?php
-            }else {
-              
-            if ($data['jenis_kelamin']=="Perempuan") {
-            ?>
-             <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio2" value="Perempuan" checked>
+            }else {?>
+             <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio2" value="Perempuan" checked disabled>
             <label class="form-check-label" for="inlineRadio2">Perempuan</label>
-            <?php
-            }
-          }
-            ?>
-            
-            
-          
+            <?php }?>          
         </div>
   </div>
-  <div class="form-group">
+  <div class="form-group ">
     <label for="exampleFormControlSelect1">Agama</label>
-    <select class="form-control" readonly name="agama" id="exampleFormControlSelect1">
+    <select class="form-control" name="agama"  id="exampleFormControlSelect1" disabled>
        <?php if ($data['agama']=="Islam") {?>
           <option >Islam</option>
         <?php }elseif ($data['agama']=="Kristen") {?>
@@ -95,6 +86,7 @@
         <?php }?>
     </select>
   </div>
+    <a class="btn btn-primary btn-sm mb-3" href="data.php"  role="button">Kembali</a>
   <?php  }?>
     </div>
     <!-- js -->

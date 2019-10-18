@@ -9,8 +9,10 @@ include 'database.php';
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Home</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css" />
+    
   </head>
-  <body >
+  <body class="bg-dark">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <button
         class="navbar-toggler"
@@ -38,8 +40,8 @@ include 'database.php';
       </div>
     </nav>
     <!-- isi -->
-<div class="container mt-5 mb-5" style="Margin-top: 50px;">
-    <table class="table">
+<div class="container mt-5 mb-5 bg-light" style="Margin-top: 50px;">
+    <table class="table mt-3 mb-3" id="pagi">
     <thead class="thead-dark">
     <tr>
       <th scope="col">No</th>
@@ -65,8 +67,8 @@ include 'database.php';
       <td><?=$data['jenis_kelamin']?></td>
       <td><?=$data['agama']?></td>
       <td><?=$data['umur']?></td>
-      <td><a class="btn btn-primary btn-sm" href="biodata.php?id=<?=$data['id']?>"  role="button">lihat</a>|
-      <a class="btn btn-warning btn-sm" href="edit.php?id=<?=$data['id']?>"  role="button">edit</a>|
+      <td><a class="btn btn-success btn-sm mr-1" href="biodata.php?id=<?=$data['id']?>"  role="button">lihat</a>|
+      <a class="btn btn-warning btn-sm mr-1" href="edit.php?id=<?=$data['id']?>"  role="button">edit</a>|
       <a class="btn btn-danger btn-sm" href="proses.php?id=<?=$data['id']?>&aksi=delete" onclick="return confirm('are u sure senpai :3?');" role="button">hapus</a></td>
     </tr>
     <?php
@@ -76,9 +78,14 @@ include 'database.php';
     </table>
 </div>
     <!-- js -->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.bundle.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap4.min.js"></script>
+    <script>$(document).ready(function() {
+      $('#pagi').DataTable();
+    } );</script>    
   </body>
 </html>
